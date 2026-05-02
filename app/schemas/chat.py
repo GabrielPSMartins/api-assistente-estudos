@@ -10,6 +10,14 @@ class ChatRequest(BaseModel):
     history: list[Message] = []
     model: str | None = None
 
+class Section(BaseModel):
+    title: str
+    content: str
+
+class ResponseBody(BaseModel):
+    sections: list[Section]
+    summary: str
+
 class ChatResponse(BaseModel):
-    response: str
-    history: list[Message]
+    response: ResponseBody
+    model: str
