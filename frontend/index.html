@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assistente de Estudos</title>
+  <link rel="stylesheet" href="/frontend/style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="chat-card">
+      <header class="chat-header">
+        <div class="brand">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <div>
+            <h1>Assistente de Estudos</h1>
+            <p>Converse com a IA em uma interface de chat.</p>
+          </div>
+        </div>
+      </header>
+
+      <section id="chat-output" class="chat-output" aria-live="polite"></section>
+
+      <form id="chat-form" class="chat-form">
+        <label for="question-input" class="sr-only">Digite sua pergunta</label>
+        <input
+          id="question-input"
+          name="question"
+          type="text"
+          placeholder="Pergunte qualquer coisa..."
+          autocomplete="off"
+          required
+        />
+        <button id="send-button" type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="/frontend/script.js"></script>
+</body>
+</html>
